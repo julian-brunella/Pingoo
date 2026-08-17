@@ -32,12 +32,39 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
+        .lang-switch {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+            font-weight: bold;
+            background: var(--accent-color);
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .lang-switch a {
+            color: var(--primary-color);
+            text-decoration: none;
+            padding: 0 15px;
+        }
+
+        .lang-switch a:hover {
+            text-decoration: underline;
+        }
+
+        .last-updated {
+            text-align: center;
+            font-style: italic;
+            color: #7f8c8d;
+            margin-bottom: 40px;
+        }
+
         h1 {
             color: var(--primary-color);
             text-align: center;
             border-bottom: 2px solid #eee;
             padding-bottom: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
             font-size: 2.2em;
         }
 
@@ -92,6 +119,13 @@
             text-decoration: none;
         }
 
+        hr.divider {
+            border: 0;
+            height: 2px;
+            background: #eee;
+            margin: 60px 0;
+        }
+
         /* Adaptation pour les téléphones portables */
         @media (max-width: 600px) {
             .container {
@@ -109,99 +143,209 @@
 <body>
 
     <div class="container">
-        <h1>Politique de Confidentialité de Pingoo</h1>
-        <p><em>Dernière mise à jour : 18 août 2026</em></p>
-
-        <h2>1. Introduction et Philosophie</h2>
-        <p>Bienvenue sur Pingoo ! Conçu pour vous accompagner au quotidien, Pingoo n'est pas qu'un simple jeu : c'est un véritable compagnon de bien-être numérique. Sa santé et son humeur virtuelles dépendent directement de vos habitudes de vie réelles, afin de vous encourager à marcher davantage et à vous déconnecter des réseaux sociaux.</p>
-        <p>Parce que l'amélioration de votre bien-être ne doit jamais se faire au détriment de votre vie privée, cette application a été forgée autour d'un principe fondamental et non négociable : le <strong>"Privacy by Design"</strong> (la protection des données dès la conception).</p>
         
-        <p>L'application Pingoo est 100 % hors ligne. Elle ne possède aucun serveur externe, n'intègre aucun outil de pistage, et absolument aucune donnée personnelle ne quitte jamais votre téléphone.</p>
-    
-        <p>Nous considérons que vos habitudes de vie et vos statistiques d'utilisation vous appartiennent exclusivement. En installant Pingoo, vous avez la garantie absolue que toutes vos interactions restent strictement confinées entre vous et votre compagnon virtuel, au cœur et sous la protection de votre propre appareil.</p>
+        <div class="lang-switch">
+            <a href="#fr">🇫🇷 Version Française</a> | <a href="#en">🇬🇧 English Version</a>
+        </div>
 
-        <h2>2. Les Données Collectées et Justification des Permissions</h2>
-        
-        <h3>2.1. Temps d'écran et Bien-être numérique (PACKAGE_USAGE_STATS)</h3>
-        <ul>
-            <li><strong>Pourquoi cette permission ?</strong> L'un des buts principaux de Pingoo est de vous aider à vous déconnecter. Cette permission permet au jeu de calculer le temps passé sur certains réseaux-sociaux populaires, afin d'inciter à la déconnexion en appliquant, si besoin, un malus sur la santé de votre compagnon virtuel en cas de temps d'écran excessif.</li>
-            <li><strong>Notre garantie :</strong> Pingoo se contente de lire la durée d'utilisation globale. L'application n'a pas accès au contenu de vos écrans, ne lit pas votre historique de navigation, et n'intercepte aucune de vos communications. Les durées d'utilisation sont analysées localement et ne sont jamais transmises à des tiers.</li>
-        </ul>
+        <div id="fr">
+            <h1>Politique de Confidentialité de Pingoo</h1>
+            <p class="last-updated">Dernière mise à jour : 18 août 2026</p>
 
-        <h3>2.2. Activité physique et Podomètre (ACTIVITY_RECOGNITION)</h3>
-        <ul>
-            <li><strong>Pourquoi cette permission ?</strong> Pour lutter contre la sédentarité, Pingoo récompense votre activité physique réelle. Le capteur de pas de votre téléphone permet de convertir votre marche quotidienne en bonus d'énergie et de bonheur pour votre Tamagotchi.</li>
-            <li><strong>Notre garantie :</strong> Seul le compteur brut de pas est interrogé. Pingoo n'utilise à aucun moment votre position GPS ou vos données de localisation. Aucun profilage médical n'est effectué et vos statistiques de marche restent strictement confinées dans la base de données locale du jeu.</li>
-        </ul>
+            <h2>1. Introduction et Philosophie</h2>
+            <p>Bienvenue sur Pingoo ! Conçu pour vous accompagner au quotidien, Pingoo n'est pas qu'un simple jeu : c'est un véritable compagnon de bien-être numérique. Sa santé et son humeur virtuelles dépendent directement de vos habitudes de vie réelles, afin de vous encourager à marcher davantage et à vous déconnecter des réseaux sociaux.</p>
+            <p>Parce que l'amélioration de votre bien-être ne doit jamais se faire au détriment de votre vie privée, cette application a été forgée autour d'un principe fondamental et non négociable : le <strong>"Privacy by Design"</strong> (la protection des données dès la conception).</p>
+            
+            <div class="highlight-box">
+                <strong>L'application Pingoo est 100 % hors ligne. Elle ne possède aucun serveur externe, n'intègre aucun outil de pistage, et absolument aucune donnée personnelle ne quitte jamais votre téléphone.</strong>
+            </div>
 
-        <h3>2.3. Microphone et Commandes vocales (RECORD_AUDIO)</h3>
-        <ul>
-            <li><strong>Pourquoi cette permission ?</strong> Le jeu propose une fonctionnalité permettant d'interagir avec Pingoo (le nourrir, le laver, jouer avec lui, …) via des commandes vocales ludiques.</li>
-            <li><strong>Notre garantie :</strong> Le microphone n'est jamais activé en arrière-plan. Il ne s'allume qu'à votre demande expresse, lorsque vous appuyez sur le bouton dédié dans l'interface du jeu. L'analyse de votre voix est traitée instantanément par le moteur de reconnaissance vocale natif d'Android. Aucun enregistrement audio n'est sauvegardé, stocké sur l'appareil ou envoyé sur un serveur.</li>
-        </ul>
+            <p>Nous considérons que vos habitudes de vie et vos statistiques d'utilisation vous appartiennent exclusivement. En installant Pingoo, vous avez la garantie absolue que toutes vos interactions restent strictement confinées entre vous et votre compagnon virtuel, au cœur et sous la protection de votre propre appareil.</p>
 
-        <h3>2.4. Partage de profils (NFC)</h3>
-        <ul>
-            <li><strong>Pourquoi cette permission ?</strong> Pingoo vous permet de faire rencontrer votre compagnon virtuel avec celui d'autres joueurs pour les ajouter à votre liste d'amis.</li>
-            <li><strong>Notre garantie :</strong> Ce partage s'effectue exclusivement en pair-à-pair (d'un appareil à l'autre) et nécessite un contact physique rapproché entre les deux téléphones. Le mode de partage doit être déclenché manuellement par l'utilisateur. Lors d'un échange NFC, seules les informations nécessaires au partage du profil Pingoo sont transmises directement entre les deux appareils. Aucune donnée personnelle n'est diffusée à votre insu en arrière-plan.</li>
-        </ul>
+            <h2>2. Les Données Collectées et Justification des Permissions</h2>
+            
+            <h3>2.1. Temps d'écran et Bien-être numérique (PACKAGE_USAGE_STATS)</h3>
+            <ul>
+                <li><strong>Pourquoi cette permission ?</strong> L'un des buts principaux de Pingoo est de vous aider à vous déconnecter. Cette permission permet au jeu de calculer le temps passé sur certains réseaux-sociaux populaires, afin d'inciter à la déconnexion en appliquant, si besoin, un malus sur la santé de votre compagnon virtuel en cas de temps d'écran excessif.</li>
+                <li><strong>Notre garantie :</strong> Pingoo se contente de lire la durée d'utilisation globale. L'application n'a pas accès au contenu de vos écrans, ne lit pas votre historique de navigation, et n'intercepte aucune de vos communications. Les durées d'utilisation sont analysées localement et ne sont jamais transmises à des tiers.</li>
+            </ul>
 
-        <h3>2.5. Notifications standard (POST_NOTIFICATIONS)</h3>
-        <ul>
-            <li><strong>Pourquoi cette permission ?</strong> Pour vous alerter si votre Pingoo réclame une attention urgente (caractéristique en état critique, sur-utilisation des réseaux-sociaux, décès du compagnon virtuel).</li>
-            <li><strong>Notre garantie :</strong> Ces alertes sont gérées par le système standard d'Android pour respecter les cycles de mise en veille de votre téléphone (pas de réveil forcé au milieu de la nuit). Vous gardez le contrôle total et pouvez désactiver ces notifications à tout moment depuis les paramètres du jeu ou de votre appareil.</li>
-        </ul>
+            <h3>2.2. Activité physique et Podomètre (ACTIVITY_RECOGNITION)</h3>
+            <ul>
+                <li><strong>Pourquoi cette permission ?</strong> Pour lutter contre la sédentarité, Pingoo récompense votre activité physique réelle. Le capteur de pas de votre téléphone permet de convertir votre marche quotidienne en bonus d'énergie et de bonheur pour votre Tamagotchi.</li>
+                <li><strong>Notre garantie :</strong> Seul le compteur brut de pas est interrogé. Pingoo n'utilise à aucun moment votre position GPS ou vos données de localisation. Aucun profilage médical n'est effectué et vos statistiques de marche restent strictement confinées dans la base de données locale du jeu.</li>
+            </ul>
 
-        <h2>3. Stockage et Sécurité des Données Locales</h2>
-        <p>L'architecture technique de Pingoo repose sur un principe absolu : vos données restent chez vous. Nous avons fait le choix délibéré de ne recourir à aucun hébergement distant.</p>
-        <ul>
-            <li><strong>Base de données locale (SQLite) :</strong> L'intégralité de votre progression, vos statistiques de bien-être, l'historique de vos actions et votre liste d'amis sont enregistrés exclusivement dans une base de données locale située directement sur la mémoire de votre appareil.</li>
-            <li><strong>Sécurité par isolation (Sandboxing) :</strong> Cette base de données est strictement protégée par le système d'exploitation Android. Grâce au mécanisme de "Sandboxing" (bac à sable) natif de votre téléphone, les données de Pingoo sont isolées et sécurisées : aucune autre application installée sur votre appareil ne peut y accéder, les modifier ou les lire.</li>
-            <li><strong>Désactivation des sauvegardes Cloud :</strong> Pour prévenir toute fuite de données vers des serveurs tiers, nous avons volontairement bloqué la sauvegarde automatique de l'application dans le cloud (via le paramètre technique <code>allowBackup="false"</code>). Vos données ne seront jamais envoyées sur les serveurs de Google ou d'un autre prestataire à votre insu. (Si vous souhaitez changer d'appareil, la sauvegarde et l'exportation de votre partie restent possibles, mais uniquement de manière manuelle, volontaire et explicite via l'outil d'exportation présent dans les paramètres du jeu).</li>
-        </ul>
+            <h3>2.3. Microphone et Commandes vocales (RECORD_AUDIO)</h3>
+            <ul>
+                <li><strong>Pourquoi cette permission ?</strong> Le jeu propose une fonctionnalité permettant d'interagir avec Pingoo (le nourrir, le laver, jouer avec lui, …) via des commandes vocales ludiques.</li>
+                <li><strong>Notre garantie :</strong> Le microphone n'est jamais activé en arrière-plan. Il ne s'allume qu'à votre demande expresse, lorsque vous appuyez sur le bouton dédié dans l'interface du jeu. L'analyse de votre voix est traitée instantanément par le moteur de reconnaissance vocale natif d'Android. Aucun enregistrement audio n'est sauvegardé, stocké sur l'appareil ou envoyé sur un serveur.</li>
+            </ul>
 
-        <h2>4. Partage des Données avec des Tiers (Le "Zéro Partage")</h2>
-        <p>Dans un écosystème numérique où les données personnelles sont constamment monétisées, Pingoo adopte une posture stricte, transparente et définitive : le <strong>"Zéro Partage"</strong>.</p>
-        <p>Puisque nous ne collectons aucune donnée sur nos serveurs, nous n'avons par définition rien à partager. Nous affirmons noir sur blanc les principes suivants :</p>
-        <ul>
-            <li><strong>Aucune vente ou cession :</strong> Absolument aucune de vos données personnelles, d'utilisation, ou de progression n'est vendue, louée, échangée ou cédée à des entreprises tierces.</li>
-            <li><strong>Aucun outil d'analyse (Analytics) :</strong> Pingoo n'intègre aucun outil de suivi comportemental (de type Google Analytics, Firebase Analytics ou équivalent). Nous ne surveillons pas la manière dont vous interagissez avec l'application.</li>
-            <li><strong>Aucun traqueur publicitaire :</strong> L'application est conçue pour être un espace de bien-être, sans aucune publicité. Par conséquent, elle ne contient aucun traceur marketing visant à profiler vos habitudes pour vous cibler.</li>
-        </ul>
-       
-            <p>La règle est simple : ce qui se passe dans Pingoo, reste exclusivement dans votre téléphone.</p>
-        
+            <h3>2.4. Partage de profils (NFC)</h3>
+            <ul>
+                <li><strong>Pourquoi cette permission ?</strong> Pingoo vous permet de faire rencontrer votre compagnon virtuel avec celui d'autres joueurs pour les ajouter à votre liste d'amis.</li>
+                <li><strong>Notre garantie :</strong> Ce partage s'effectue exclusivement en pair-à-pair (d'un appareil à l'autre) et nécessite un contact physique rapproché entre les deux téléphones. Le mode de partage doit être déclenché manuellement par l'utilisateur. Lors d'un échange NFC, seules les informations nécessaires au partage du profil Pingoo sont transmises directement entre les deux appareils. Aucune donnée personnelle n'est diffusée à votre insu en arrière-plan.</li>
+            </ul>
 
-        <h2>5. Contrôle, Révocation et Suppression des Données (Les droits du joueur)</h2>
-        <p>Conformément aux réglementations sur la protection de la vie privée et aux exigences de transparence du Google Play Store, vous disposez d'un contrôle total et absolu sur vos informations. Pingoo vous offre des moyens simples et directs pour gérer, restreindre ou supprimer vos données.</p>
-        <ul>
-            <li><strong>Révocation des permissions (Le contrôle continu) :</strong> Vous êtes libre de changer d'avis à tout moment. Toutes les autorisations accordées à Pingoo (accès aux statistiques d'utilisation, au podomètre, au microphone ou aux notifications) peuvent être révoquées instantanément depuis les paramètres de votre appareil Android (<em>Paramètres > Applications > Pingoo > Autorisations</em>). L'application continuera de fonctionner, bien que les mécaniques de jeu associées à ces permissions (comme les commandes vocales ou le bonus de marche) soient logiquement désactivées.</li>
-            <li><strong>Réinitialisation locale de la partie :</strong> Le jeu intègre un bouton "Recommencer". Cette action permet de réinitialiser l'état de votre compagnon virtuel et de purger votre progression courante directement depuis l'interface de l'application.</li>
-            <li><strong>Suppression pure et définitive (La désinstallation) :</strong> Étant donné que Pingoo ne transmet aucune donnée à des serveurs externes, la procédure de suppression totale de vos données est entièrement entre vos mains. <strong>Pour supprimer définitivement toutes vos données, il vous suffit de désinstaller l'application Pingoo.</strong> Lors de la désinstallation, le système d'exploitation Android détruit purement, intégralement et irréversiblement la base de données locale du jeu (incluant vos statistiques de bien-être, votre historique d'actions et votre liste d'amis NFC). Puisque nous ne possédons aucun accès distant à votre appareil, aucune copie de sauvegarde n'est conservée de notre côté.</li>
-        </ul>
+            <h3>2.5. Notifications standard (POST_NOTIFICATIONS)</h3>
+            <ul>
+                <li><strong>Pourquoi cette permission ?</strong> Pour vous alerter si votre Pingoo réclame une attention urgente (caractéristique en état critique, sur-utilisation des réseaux-sociaux, décès du compagnon virtuel).</li>
+                <li><strong>Notre garantie :</strong> Ces alertes sont gérées par le système standard d'Android pour respecter les cycles de mise en veille de votre téléphone (pas de réveil forcé au milieu de la nuit). Vous gardez le contrôle total et pouvez désactiver ces notifications à tout moment depuis les paramètres du jeu ou de votre appareil.</li>
+            </ul>
 
-        <h2>6. Protection des Mineurs</h2>
-        <p>Conformément aux réglementations internationales sur la protection de la vie privée (telles que la loi COPPA aux États-Unis et le RGPD en Europe) et aux directives strictes du Google Play Store concernant l'usage de permissions avancées (comme la mesure du temps d'écran ou l'activation du microphone), <strong>Pingoo s'adresse officiellement à un public âgé de 13 ans et plus.</strong></p>
-        <p>Cependant, nous tenons à être d'une transparence absolue sur la nature de notre application : <strong>Pingoo est par essence un environnement sain, bienveillant et totalement sécurisé.</strong></p>
-        <p>L'application ne contient :</p>
-        <ul>
-            <li>Aucun contenu inapproprié ou violent ;</li>
-            <li>Aucune publicité ;</li>
-            <li>Aucun système de messagerie en ligne permettant de contacter des inconnus ;</li>
-            <li>Aucune incitation à la dépense (pas de micro-transactions cachées).</li>
-        </ul>
-        <p>Pingoo est pensé comme un outil de bien-être numérique et de déconnexion.</p>
-        <p>Étant donné que notre application ne collecte, ne transmet et ne stocke aucune information sur des serveurs distants, nous ne détenons aucune base de données de nos utilisateurs, mineurs ou majeurs. Si un parent ou un représentant légal constate que son enfant de moins de 13 ans utilise l'application et souhaite en effacer les traces, <strong>il lui suffit de désinstaller Pingoo de l'appareil de l'enfant pour supprimer instantanément et définitivement toutes les données locales qui y sont liées.</strong></p>
+            <h2>3. Stockage et Sécurité des Données Locales</h2>
+            <p>L'architecture technique de Pingoo repose sur un principe absolu : vos données restent chez vous. Nous avons fait le choix délibéré de ne recourir à aucun hébergement distant.</p>
+            <ul>
+                <li><strong>Base de données locale (SQLite) :</strong> L'intégralité de votre progression, vos statistiques de bien-être, l'historique de vos actions et votre liste d'amis sont enregistrés exclusivement dans une base de données locale située directement sur la mémoire de votre appareil.</li>
+                <li><strong>Sécurité par isolation (Sandboxing) :</strong> Cette base de données est strictement protégée par le système d'exploitation Android. Grâce au mécanisme de "Sandboxing" (bac à sable) natif de votre téléphone, les données de Pingoo sont isolées et sécurisées : aucune autre application installée sur votre appareil ne peut y accéder, les modifier ou les lire.</li>
+                <li><strong>Désactivation des sauvegardes Cloud :</strong> Pour prévenir toute fuite de données vers des serveurs tiers, nous avons volontairement bloqué la sauvegarde automatique de l'application dans le cloud (via le paramètre technique <code>allowBackup="false"</code>). Vos données ne seront jamais envoyées sur les serveurs de Google ou d'un autre prestataire à votre insu. (Si vous souhaitez changer d'appareil, la sauvegarde et l'exportation de votre partie restent possibles, mais uniquement de manière manuelle, volontaire et explicite via l'outil d'exportation présent dans les paramètres du jeu).</li>
+            </ul>
 
-        <h2>7. Modifications de la Politique et Contact</h2>
-        <p><strong>Mises à jour de la Politique :</strong><br>
-        Dans le cadre de l'évolution de Pingoo et de l'ajout de nouvelles fonctionnalités liées à votre bien-être numérique, nous pourrions être amenés à faire évoluer la présente Politique de Confidentialité. Toute modification apportée à ce texte entrera en vigueur et accompagnera les futures mises à jour de l'application déployées sur le Google Play Store. Étant donné que nous ne collectons aucune coordonnée (ni compte utilisateur, ni adresse e-mail), nous vous invitons à consulter cette page lors des mises à jour majeures de l'application.</p>
-        
-        <div class="contact-section">
-            <p><strong>Contact du développeur :</strong></p>
-            <p>La transparence et la confiance sont au cœur du projet Pingoo. Si vous avez la moindre question, une suggestion, ou une préoccupation concernant cette Politique de Confidentialité ou la manière dont vos données locales sont gérées par l'application, vous pouvez me contacter directement à l'adresse officielle suivante :</p>
-            <p>📧 <a href="mailto:jbrunella.dev@gmail.com" class="email">jbrunella.dev@gmail.com</a></p>
-            <p> Responsable : Julian Brunella
+            <h2>4. Partage des Données avec des Tiers (Le "Zéro Partage")</h2>
+            <p>Dans un écosystème numérique où les données personnelles sont constamment monétisées, Pingoo adopte une posture stricte, transparente et définitive : le <strong>"Zéro Partage"</strong>.</p>
+            <p>Puisque nous ne collectons aucune donnée sur nos serveurs, nous n'avons par définition rien à partager. Nous affirmons noir sur blanc les principes suivants :</p>
+            <ul>
+                <li><strong>Aucune vente ou cession :</strong> Absolument aucune de vos données personnelles, d'utilisation, ou de progression n'est vendue, louée, échangée ou cédée à des entreprises tierces.</li>
+                <li><strong>Aucun outil d'analyse (Analytics) :</strong> Pingoo n'intègre aucun outil de suivi comportemental (de type Google Analytics, Firebase Analytics ou équivalent). Nous ne surveillons pas la manière dont vous interagissez avec l'application.</li>
+                <li><strong>Aucun traqueur publicitaire :</strong> L'application est conçue pour être un espace de bien-être, sans aucune publicité. Par conséquent, elle ne contient aucun traceur marketing visant à profiler vos habitudes pour vous cibler.</li>
+            </ul>
+            <div class="highlight-box">
+                La règle est simple : ce qui se passe dans Pingoo, reste exclusivement dans votre téléphone.
+            </div>
+
+            <h2>5. Contrôle, Révocation et Suppression des Données (Les droits du joueur)</h2>
+            <p>Conformément aux réglementations sur la protection de la vie privée et aux exigences de transparence du Google Play Store, vous disposez d'un contrôle total et absolu sur vos informations. Pingoo vous offre des moyens simples et directs pour gérer, restreindre ou supprimer vos données.</p>
+            <ul>
+                <li><strong>Révocation des permissions (Le contrôle continu) :</strong> Vous êtes libre de changer d'avis à tout moment. Toutes les autorisations accordées à Pingoo (accès aux statistiques d'utilisation, au podomètre, au microphone ou aux notifications) peuvent être révoquées instantanément depuis les paramètres de votre appareil Android (<em>Paramètres > Applications > Pingoo > Autorisations</em>). L'application continuera de fonctionner, bien que les mécaniques de jeu associées à ces permissions (comme les commandes vocales ou le bonus de marche) soient logiquement désactivées.</li>
+                <li><strong>Réinitialisation locale de la partie :</strong> Le jeu intègre un bouton "Recommencer". Cette action permet de réinitialiser l'état de votre compagnon virtuel et de purger votre progression courante directement depuis l'interface de l'application.</li>
+                <li><strong>Suppression pure et définitive (La désinstallation) :</strong> Étant donné que Pingoo ne transmet aucune donnée à des serveurs externes, la procédure de suppression totale de vos données est entièrement entre vos mains. <strong>Pour supprimer définitivement toutes vos données, il vous suffit de désinstaller l'application Pingoo.</strong> Lors de la désinstallation, le système d'exploitation Android détruit purement, intégralement et irréversiblement la base de données locale du jeu (incluant vos statistiques de bien-être, votre historique d'actions et votre liste d'amis NFC). Puisque nous ne possédons aucun accès distant à votre appareil, aucune copie de sauvegarde n'est conservée de notre côté.</li>
+            </ul>
+
+            <h2>6. Protection des Mineurs</h2>
+            <p>Conformément aux réglementations internationales sur la protection de la vie privée (telles que la loi COPPA aux États-Unis et le RGPD en Europe) et aux directives strictes du Google Play Store concernant l'usage de permissions avancées (comme la mesure du temps d'écran ou l'activation du microphone), <strong>Pingoo s'adresse officiellement à un public âgé de 13 ans et plus.</strong></p>
+            <p>Cependant, nous tenons à être d'une transparence absolue sur la nature de notre application : <strong>Pingoo est par essence un environnement sain, bienveillant et totalement sécurisé.</strong></p>
+            <p>L'application ne contient :</p>
+            <ul>
+                <li>Aucun contenu inapproprié ou violent ;</li>
+                <li>Aucune publicité ;</li>
+                <li>Aucun système de messagerie en ligne permettant de contacter des inconnus ;</li>
+                <li>Aucune incitation à la dépense (pas de micro-transactions cachées).</li>
+            </ul>
+            <p>Pingoo est pensé comme un outil de bien-être numérique et de déconnexion.</p>
+            <p>Étant donné que notre application ne collecte, ne transmet et ne stocke aucune information sur des serveurs distants, nous ne détenons aucune base de données de nos utilisateurs, mineurs ou majeurs. Si un parent ou un représentant légal constate que son enfant de moins de 13 ans utilise l'application et souhaite en effacer les traces, <strong>il lui suffit de désinstaller Pingoo de l'appareil de l'enfant pour supprimer instantanément et définitivement toutes les données locales qui y sont liées.</strong></p>
+
+            <h2>7. Modifications de la Politique et Contact</h2>
+            <p><strong>Mises à jour de la Politique :</strong><br>
+            Dans le cadre de l'évolution de Pingoo et de l'ajout de nouvelles fonctionnalités liées à votre bien-être numérique, nous pourrions être amenés à faire évoluer la présente Politique de Confidentialité. Toute modification apportée à ce texte entrera en vigueur et accompagnera les futures mises à jour de l'application déployées sur le Google Play Store. Étant donné que nous ne collectons aucune coordonnée (ni compte utilisateur, ni adresse e-mail), nous vous invitons à consulter cette page lors des mises à jour majeures de l'application.</p>
+            
+            <div class="contact-section">
+                <p><strong>Contact du développeur :</strong></p>
+                <p>La transparence et la confiance sont au cœur du projet Pingoo. Si vous avez la moindre question, une suggestion, ou une préoccupation concernant cette Politique de Confidentialité ou la manière dont vos données locales sont gérées par l'application, vous pouvez me contacter directement à l'adresse officielle suivante :</p>
+                <p>Responsable : Julian Brunella</p>
+                <p>📧 <a href="mailto:jbrunella.dev@gmail.com" class="email">jbrunella.dev@gmail.com</a></p>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <div id="en">
+            <h1>Pingoo Privacy Policy</h1>
+            <p class="last-updated">Last updated: August 18, 2026</p>
+
+            <h2>1. Introduction and Philosophy</h2>
+            <p>Welcome to Pingoo! Designed to accompany you daily, Pingoo is more than just a game: it is a true digital wellbeing companion. Its virtual health and mood depend directly on your real-life habits, encouraging you to walk more and disconnect from social networks.</p>
+            <p>Because improving your wellbeing should never come at the expense of your privacy, this application was built around a fundamental and non-negotiable principle: <strong>"Privacy by Design"</strong>.</p>
+            
+            <div class="highlight-box">
+                <strong>The Pingoo application operates 100% offline. It has no external servers, integrates no tracking tools, and absolutely no personal data ever leaves your device.</strong>
+            </div>
+
+            <p>We believe that your lifestyle habits and usage statistics belong exclusively to you. By installing Pingoo, you have the absolute guarantee that all your interactions remain strictly confined between you and your virtual companion, securely protected within your own device.</p>
+
+            <h2>2. Data Collected and Permissions Justification</h2>
+            
+            <h3>2.1. Screen Time and Digital Wellbeing (PACKAGE_USAGE_STATS)</h3>
+            <ul>
+                <li><strong>Why this permission?</strong> One of Pingoo's primary goals is to help you disconnect. This permission allows the game to calculate the time spent on certain popular social networks to encourage disconnection by applying, if necessary, a penalty to your virtual companion's health in case of excessive screen time.</li>
+                <li><strong>Our guarantee:</strong> Pingoo solely reads overall usage duration. The application does not access the content of your screens, does not read your browsing history, and does not intercept any of your communications. Usage times are analyzed locally and are never transmitted to third parties.</li>
+            </ul>
+
+            <h3>2.2. Physical Activity and Pedometer (ACTIVITY_RECOGNITION)</h3>
+            <ul>
+                <li><strong>Why this permission?</strong> To combat sedentary lifestyles, Pingoo rewards your actual physical activity. Your phone's step sensor allows the app to convert your daily walking into energy and happiness bonuses for your Tamagotchi.</li>
+                <li><strong>Our guarantee:</strong> Only the raw step counter is queried. Pingoo never uses your GPS position or location data. No medical profiling is performed, and your walking statistics remain strictly confined to the game's local database.</li>
+            </ul>
+
+            <h3>2.3. Microphone and Voice Commands (RECORD_AUDIO)</h3>
+            <ul>
+                <li><strong>Why this permission?</strong> The game offers a feature allowing you to interact with Pingoo (feed it, wash it, play with it, etc.) via playful voice commands.</li>
+                <li><strong>Our guarantee:</strong> The microphone is never activated in the background. It only turns on at your explicit request when you press the dedicated button in the game's interface. Voice analysis is processed instantly by Android's native speech recognition engine. No audio recording is saved, stored on the device, or sent to a server.</li>
+            </ul>
+
+            <h3>2.4. Profile Sharing (NFC)</h3>
+            <ul>
+                <li><strong>Why this permission?</strong> Pingoo allows your virtual companion to meet other players' companions to add them to your friend list.</li>
+                <li><strong>Our guarantee:</strong> This sharing occurs exclusively peer-to-peer (from one device to another) and requires close physical contact between the two phones. The sharing mode must be manually triggered by the user. During an NFC exchange, only the information necessary to share the Pingoo profile is transmitted directly between the two devices. No personal data is broadcasted without your knowledge in the background.</li>
+            </ul>
+
+            <h3>2.5. Standard Notifications (POST_NOTIFICATIONS)</h3>
+            <ul>
+                <li><strong>Why this permission?</strong> To alert you if your Pingoo requires urgent attention (critical health status, social network overuse, death of the virtual companion).</li>
+                <li><strong>Our guarantee:</strong> These alerts are managed by the standard Android system to respect your phone's sleep cycles (no forced wake-ups in the middle of the night). You retain full control and can disable these notifications at any time from the game or your device's settings.</li>
+            </ul>
+
+            <h2>3. Local Storage and Data Security</h2>
+            <p>Pingoo's technical architecture is based on an absolute principle: your data stays with you. We have deliberately chosen not to use any remote hosting.</p>
+            <ul>
+                <li><strong>Local Database (SQLite):</strong> Your entire progression, wellbeing statistics, action history, and friend list are saved exclusively in a local database located directly on your device's memory.</li>
+                <li><strong>Security by Isolation (Sandboxing):</strong> This database is strictly protected by the Android operating system. Thanks to your phone's native "Sandboxing" mechanism, Pingoo's data is isolated and secured: no other application installed on your device can access, modify, or read it.</li>
+                <li><strong>Cloud Backups Disabled:</strong> To prevent any data leakage to third-party servers, we have intentionally blocked the automatic backup of the application to the cloud (via the technical parameter <code>allowBackup="false"</code>). Your data will never be sent to Google's servers or any other provider without your knowledge. (If you wish to change devices, backing up and exporting your game remains possible, but only manually, voluntarily, and explicitly via the export tool available in the game settings).</li>
+            </ul>
+
+            <h2>4. Data Sharing with Third Parties ("Zero Sharing")</h2>
+            <p>In a digital ecosystem where personal data is constantly monetized, Pingoo adopts a strict, transparent, and definitive stance: <strong>"Zero Sharing"</strong>.</p>
+            <p>Since we collect no data on our servers, we inherently have nothing to share. We state the following principles in black and white:</p>
+            <ul>
+                <li><strong>No Sale or Transfer:</strong> Absolutely none of your personal data, usage data, or progression data is sold, rented, exchanged, or transferred to third-party companies.</li>
+                <li><strong>No Analytics Tools:</strong> Pingoo does not integrate any behavioral tracking tools (such as Google Analytics, Firebase Analytics, or equivalent). We do not monitor how you interact with the application.</li>
+                <li><strong>No Advertising Trackers:</strong> The application is designed to be a wellbeing space, entirely free of advertisements. Consequently, it contains no marketing trackers aiming to profile your habits for targeted advertising.</li>
+            </ul>
+            <div class="highlight-box">
+                The rule is simple: what happens in Pingoo stays exclusively on your phone.
+            </div>
+
+            <h2>5. Control, Revocation, and Data Deletion (User Rights)</h2>
+            <p>In compliance with privacy protection regulations and the Google Play Store's transparency requirements, you have total and absolute control over your information. Pingoo provides you with simple and direct ways to manage, restrict, or delete your data.</p>
+            <ul>
+                <li><strong>Revocation of Permissions (Continuous Control):</strong> You are free to change your mind at any time. All permissions granted to Pingoo (access to usage statistics, pedometer, microphone, or notifications) can be revoked instantly from your Android device settings (<em>Settings > Apps > Pingoo > Permissions</em>). The application will continue to function, although the game mechanics associated with these permissions (such as voice commands or walking bonuses) will logically be disabled.</li>
+                <li><strong>Local Game Reset:</strong> The game includes a "Restart" button. This action allows you to reset your virtual companion's state and purge your current progression directly from the application's interface.</li>
+                <li><strong>Complete and Permanent Deletion (Uninstallation):</strong> Since Pingoo does not transmit any data to external servers, the procedure for total data deletion is entirely in your hands. <strong>To permanently delete all your data, you simply need to uninstall the Pingoo application.</strong> Upon uninstallation, the Android operating system purely, entirely, and irreversibly destroys the game's local database (including your wellbeing statistics, action history, and NFC friend list). Because we have no remote access to your device, no backup copy is kept on our end.</li>
+            </ul>
+
+            <h2>6. Protection of Minors</h2>
+            <p>In accordance with international privacy regulations (such as COPPA in the United States and the GDPR in Europe) and the Google Play Store's strict guidelines regarding the use of advanced permissions (such as screen time measurement or microphone activation), <strong>Pingoo is officially intended for an audience aged 13 and over.</strong></p>
+            <p>However, we wish to be absolutely transparent about the nature of our application: <strong>Pingoo is inherently a healthy, benevolent, and completely secure environment.</strong></p>
+            <p>The application contains:</p>
+            <ul>
+                <li>No inappropriate or violent content;</li>
+                <li>No advertising;</li>
+                <li>No online messaging system allowing contact with strangers;</li>
+                <li>No incentives to spend money (no hidden micro-transactions).</li>
+            </ul>
+            <p>Pingoo is designed as a digital wellbeing and disconnection tool.</p>
+            <p>Given that our application does not collect, transmit, or store any information on remote servers, we maintain no database of our users, minors or adults. If a parent or legal guardian realizes that their child under 13 is using the application and wishes to erase all traces, <strong>they simply need to uninstall Pingoo from the child's device to instantly and permanently delete all associated local data.</strong></p>
+
+            <h2>7. Policy Modifications and Contact</h2>
+            <p><strong>Policy Updates:</strong><br>
+            As Pingoo evolves and new digital wellbeing features are added, we may need to update this Privacy Policy. Any modifications made to this text will take effect and accompany future updates of the application deployed on the Google Play Store. Since we collect no contact information (no user accounts, no email addresses), we encourage you to review this page during major application updates.</p>
+            
+            <div class="contact-section">
+                <p><strong>Developer Contact:</strong></p>
+                <p>Transparency and trust are at the heart of the Pingoo project. If you have any questions, suggestions, or concerns regarding this Privacy Policy or how your local data is managed by the application, you can contact me directly at the following official address:</p>
+                <p>Responsible Party: Julian Brunella</p>
+                <p>📧 <a href="mailto:jbrunella.dev@gmail.com" class="email">jbrunella.dev@gmail.com</a></p>
+            </div>
         </div>
 
     </div>
